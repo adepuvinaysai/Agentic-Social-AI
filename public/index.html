@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic Social AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Agentic Social AI</h1>
+      <p>Boost user experience and create social media content with an AI agent.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Start with your goal</h2>
+        <div class="form-grid">
+          <div>
+            <label for="taskType">Agent task</label>
+            <select id="taskType">
+              <option value="social">Build social media post</option>
+              <option value="ux">Improve user experience</option>
+              <option value="engagement">Analyze engagement</option>
+            </select>
+          </div>
+          <div>
+            <label for="topicInput">Topic / Area</label>
+            <input id="topicInput" type="text" value="brand storytelling" />
+          </div>
+          <div>
+            <label for="detailsInput">Details / Metrics</label>
+            <textarea id="detailsInput" rows="4" placeholder="Describe the audience, platform, or engagement metrics.">Post has strong visuals but needs more comments and shares.</textarea>
+          </div>
+          <button id="runAgentButton">Run AI Agent</button>
+        </div>
+      </section>
+
+      <section class="panel" id="resultsPanel">
+        <h2>Agent results</h2>
+        <pre id="agentResult">Use the form above to ask the agent for help.</pre>
+      </section>
+
+      <section class="panel" id="feedPanel">
+        <h2>Content feed</h2>
+        <div class="feed-controls">
+          <input id="feedTopic" type="text" placeholder="Enter a feed topic" value="community" />
+          <button id="refreshFeedButton">Refresh feed</button>
+        </div>
+        <div id="feedList"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
